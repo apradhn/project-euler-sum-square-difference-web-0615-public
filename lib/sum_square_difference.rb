@@ -3,17 +3,9 @@ def sum_square_difference(num)
 end
 
 def sum_of_squares(num)
-  sum = 0
-  1.upto(num) do |i|
-    sum += i**2
-  end
-  sum
+  (1..num).inject(0){|sum, n| sum + n**2}
 end
 
 def sum_of_integers(num)
-  sum = 0
-  1.upto(num) do |i|
-    sum += i
-  end
-  sum
+  (1..num).reduce(:+)
 end
